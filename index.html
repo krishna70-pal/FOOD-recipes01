@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/Z1srO+0W78KzN+rdkX1hQ1jK+e+oPb5y+XJpF7d0xIM+B07jRM" crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>MakeMyRecepie</title>
+  </head>
+  <body class="w-full h-screen">
+    <nav
+      class="absolute top-0 left-0 w-full h-20 bg-transparent backdrop-blur-md shadow-lg flex justify-between p-5 items-center z-50 flex-wrap"
+    >
+      <div class="mr-5" id="logo">
+        <a href="index.html"
+          ><p
+            class="text-xl md:text-3xl text-white hover:text-red-600 font-semibold"
+          >
+            MakeMyRecepie
+      </p></a
+        >
+      </div>
+
+      <div class="hidden lg:flex gap-20 justify-between items-center" id="link">
+       
+           <ul class="flex gap-8">
+          <a href="index.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Home
+            </li></a
+          >
+          <a href="#categories">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Categories
+            </li></a
+          >
+          <a href="tipsandtricks.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Tips & Tricks
+            </li></a
+          >
+          <a href="contact.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Contact Us 
+            </li></a
+          >
+        </ul>
+        </div>
+       
+        <form class="flex items-center">
+          <input
+            type="text"
+            placeholder="Type Recepie"
+            class="shadow-lg py-1 px-5 border border-white rounded-l-lg text-white"
+          />
+          <button class="bg-red-500 text-white px-3 py-1.5 rounded-r-lg">
+            Search
+          </button>
+        </form>
+      </div>
+      <div id="link1"><button id="bar"><i class="fa-solid fa-bars"></i></button></div>
+      <div id="both" class="hidden lg:flex flex gap-5">
+        <button
+         id="btn" class="bg-red-500 text-white hover:bg-red-600 px-5 py-2 font-semibold rounded-lg cursor-pointer"
+        >
+          Login
+        </button>
+        <button
+          class="border border-white text-white px-5 py-2 font-semibold rounded-lg cursor-pointer hover:opacity-80" id="resig"
+        >
+          SignUp
+        </button>
+      </div>
+    </nav>
+
+    <section
+      class="relative w-full min-h-[90vh] flex flex-col items-center justify-center text-center px-6 lg:px-16 py-16 md:py-32"
+    >
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="
+          background-image: url('https://plus.unsplash.com/premium_photo-1695762436987-1cf827e5f1dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fGJ1cmdlcmFpfGVufDB8MHwwfHx8MA%3D%3D');
+        "
+      ></div>
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <!-- Content -->
+      <div class="relative z-1 text-white max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Welcome to Our Platform
+        </h1>
+        <p class="mt-4 text-lg md:text-xl">
+          Discover amazing features and join us today.
+        </p>
+        <div class="mt-6">
+          <a
+            href="#cageory"
+            class="group px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-lg font-semibold transition inline-flex items-center"
+          >
+            Get Started
+            <i
+              class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-8 mt-8">
+      <div class="w-full flex justify-between items-center">
+        <h1 class="text-start font-semibold text-xl md:text-2xl">
+          Popular Dishes
+        </h1>
+        <a
+          href="#"
+          class="px-6 py-3 text-red-500 font-semibold rounded-lg hover:text-red-600 transition"
+          >All</a
+        >
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
+        <!-- CARD 1 -->
+        <div
+          class="rounded-lg overflow-hidden border border-gray-300 shadow-lg flex flex-col bg-white"
+        >
+          <div class="relative">
+            <img
+              class="w-full h-56 object-cover"
+              src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="Simplest Salad Recipe"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"
+            ></div>
+            <div
+              class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg"
+            >
+              #1
+            </div>
+          </div>
+          <div class="px-6 py-4 flex-grow">
+            <h2 class="font-semibold text-lg hover:text-red-600 transition">
+              Simplest Salad Recipe
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">
+              A fresh and healthy salad recipe that's easy to prepare.
+            </p>
+          </div>
+          <div class="px-6 py-3 flex justify-between bg-gray-100">
+           <a href="salad.html">
+             <button
+              class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            >
+              View
+            </button>
+           </a>
+            <!-- <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button> -->
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="rounded-lg overflow-hidden shadow-lg border border-gray-300 flex flex-col bg-white"
+        >
+          <div class="relative">
+            <img
+              class="w-full h-56 object-cover"
+              src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="FastFood Ideas"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"
+            ></div>
+            <div
+              class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg"
+            >
+              #2
+            </div>
+          </div>
+          <div class="px-6 py-4 flex-grow">
+            <h2 class="font-semibold text-lg hover:text-red-600 transition">
+              Best FastFood Ideas
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">
+              Quick and delicious fast food ideas to try at home.
+            </p>
+          </div>
+          <div class="px-6 py-3 flex justify-between bg-gray-100">
+            <a href="fast.html"><button
+              class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            >
+              View
+            </button></a>
+            <!-- <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button> -->
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="rounded-lg overflow-hidden shadow-lg border border-gray-300 flex flex-col bg-white"
+        >
+          <div class="relative">
+            <img
+              class="w-full h-56 object-cover"
+              src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="Why to eat salad?"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition"
+            ></div>
+            <div
+              class="text-xs absolute top-2 right-2 bg-red-500 px-3 py-1 text-white rounded-lg"
+            >
+              #3
+            </div>
+          </div>
+          <div class="px-6 py-4 flex-grow">
+            <h2 class="font-semibold text-lg hover:text-red-600 transition">
+              Why to eat salad?
+            </h2>
+            <p class="text-gray-500 text-sm mt-1">
+              The benefits of including fresh salads in your daily diet.
+            </p>
+          </div>
+          <div class="px-6 py-3 flex justify-between bg-gray-100">
+           <a href="eat.html"> <button
+              class="px-4 py-2 text-red-500 border border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            >
+              View
+            </button></a>
+            <!-- <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Add <i class="fa-solid fa-cart-plus"></i></button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- categaries -->
+   <div id="categaries">
+
+     <div class="w-full h-full dark:bg-rose-100/30 bg-[#1b1b1b]">
+      <div
+        id="cageory"
+        class="w-full h-full flex flex-col justify-center items-center py-10"
+      >
+        <!-- Title -->
+        <p
+          class="pb-2 text-lg lg:text-2xl text-rose-600 font-semibold"
+          id="categories"
+        >
+          Category
+        </p>
+        <h2
+          class="text-3xl lg:text-5xl text-center font-serif font-semibold mb-10 dark:text-black text-white"
+        >
+          Choose Your Best Food
+        </h2>
+
+        <div
+          class="flex gap-6 flex-wrap lg:flex-nowrap justify-center items-center"
+        >
+          <!-- 1 -->
+          <div
+            class="flex flex-col gap-4 rounded-lg shadow-lg dark:bg-white bg-[#262525] group"
+          >
+            <!-- Card Image -->
+            <img
+              class="w-[18rem] h-[10rem] sm:w-[22rem] sm:h-[14rem] object-center aspect-square rounded-t-lg"
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxwaXp6YXxlbnwwfDB8fHwxNzYxMTE3ODIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Card Image"
+            />
+
+            <div class="flex flex-col">
+              <!--  -->
+              <div class="flex items-center justify-between my-4">
+                <!-- Rater -->
+                <div
+                  class="relative w-1/2 h-[4rem] flex items-center justify-end border-l-4 border-rose-600 rounded-tr-full rounded-br-full dark:bg-rose-100 bg-[#414141]"
+                >
+                  <img
+                    class="absolute right-2 z-30 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocIexhmmTS8LcwWo1fPGY5Fl3KXpd-JuBE_Gj56P3rUR2g=s96-c"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-8 z-20 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxNHx8cHJvZmlsZXN8ZW58MHwwfHx8MTczNjUxNDE0NHww&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-14 z-10 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxwcm9maWxlc3xlbnwwfDB8fHwxNzM2NTE0MTQ0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                </div>
+
+                <!-- Rate -->
+                <div class="flex gap-1 items-center justify-end text-2xl">
+                  <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                  <p class="dark:text-black text-white font-bold pr-4">5.0</p>
+                </div>
+              </div>
+
+              <!-- Description -->
+
+              <h2
+                class="pl-4 text-2xl font-semibold group-hover:text-rose-600 cursor-pointer dark:text-black text-white"
+              >
+                Pizza Slice
+              </h2>
+              <p class="pl-4 dark:text-gray-800 text-gray-300 mb-4">
+                Cheese, Ham & Pineapple
+              </p>
+              <a href="pizza.html">
+                <button
+                  id="btn"
+                  class="w-fit ml-4 mb-6 text-xl text-rose-700 font-bold py-2 px-4 border border-gray-500 rounded-full uppercase"
+                >
+                  See Recepie
+                </button></a
+              >
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div
+            class="flex flex-col gap-4 rounded-lg shadow-lg dark:bg-white bg-[#262525] group"
+          >
+            <!-- Card Image -->
+            <img
+              class="w-[18rem] h-[10rem] sm:w-[22rem] sm:h-[14rem] object-center aspect-square rounded-t-lg"
+              src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxDaGlja2VuJTIwZm9vZHxlbnwwfDB8fHwxNzYxMTIwNzA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Card Image"
+            />
+
+            <div class="flex flex-col">
+              <!--  -->
+              <div class="flex items-center justify-between my-4">
+                <!-- Rater -->
+                <div
+                  class="relative w-1/2 h-[4rem] flex items-center justify-end border-l-4 border-rose-600 rounded-tr-full rounded-br-full dark:bg-rose-100 bg-[#414141]"
+                >
+                  <img
+                    class="absolute right-2 z-30 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocIexhmmTS8LcwWo1fPGY5Fl3KXpd-JuBE_Gj56P3rUR2g=s96-c"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-8 z-20 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxNHx8cHJvZmlsZXN8ZW58MHwwfHx8MTczNjUxNDE0NHww&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-14 z-10 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxwcm9maWxlc3xlbnwwfDB8fHwxNzM2NTE0MTQ0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                </div>
+
+                <!-- Rate -->
+                <div class="flex gap-1 items-center justify-end text-2xl">
+                  <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                  <p class="dark:text-black text-white font-bold pr-4">4.6</p>
+                </div>
+              </div>
+
+              <!-- Description -->
+
+              <h2
+                class="pl-4 text-2xl font-semibold group-hover:text-rose-600 cursor-pointer dark:text-black text-white"
+              >
+                Chicken Paradise
+              </h2>
+              <p class="pl-4 dark:text-gray-800 text-gray-300 mb-4">
+                Creamy, spicy, rich, and flavour-packed 🍗🔥
+              </p>
+              <a href="Recipies.html">
+                <button
+                  id="btn"
+                  class="w-fit ml-4 mb-6 text-xl text-rose-700 font-bold py-2 px-4 border border-gray-500 rounded-full uppercase"
+                >
+                  See Recepie
+                </button></a
+              >
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div
+            class="flex flex-col gap-4 rounded-lg shadow-lg dark:bg-white bg-[#262525] group"
+          >
+            <!-- Card Image -->
+            <img
+              class="w-[18rem] h-[10rem] sm:w-[22rem] sm:h-[14rem] object-center aspect-square rounded-t-lg"
+              src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8YnVyZ2VyfGVufDB8MHx8fDE3NjExMTc5NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Card Image"
+            />
+
+            <div class="flex flex-col">
+              <!--  -->
+              <div class="flex items-center justify-between my-4">
+                <!-- Rater -->
+                <div
+                  class="relative w-1/2 h-[4rem] flex items-center justify-end border-l-4 border-rose-600 rounded-tr-full rounded-br-full dark:bg-rose-100 bg-[#414141]"
+                >
+                  <img
+                    class="absolute right-2 z-1 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://lh3.googleusercontent.com/a/ACg8ocIexhmmTS8LcwWo1fPGY5Fl3KXpd-JuBE_Gj56P3rUR2g=s96-c"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-8 z-1 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxNHx8cHJvZmlsZXN8ZW58MHwwfHx8MTczNjUxNDE0NHww&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                  <img
+                    class="absolute right-14 z-1 w-11 h-11 rounded-full border-2 border-gray-200"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxwcm9maWxlc3xlbnwwfDB8fHwxNzM2NTE0MTQ0fDA&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="Samuel Abera avatar"
+                  />
+                </div>
+
+                <!-- Rate -->
+                <div class="flex gap-1 items-center justify-end text-2xl">
+                  <ion-icon class="text-yellow-500" name="star"></ion-icon>
+                  <p class="dark:text-black text-white font-bold pr-4">5.0</p>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <h2
+                class="pl-4 text-2xl font-semibold group-hover:text-rose-600 cursor-pointer dark:text-black text-white"
+              >
+                Hamburger
+              </h2>
+              <p class="pl-4 dark:text-gray-800 text-gray-300 mb-4">
+                Soft bun crispy patty creamy sauce perfect burger
+              </p>
+              <a href="hamburgur.html">
+                <button
+                  id="btn"
+                  class="w-fit ml-4 mb-6 text-xl text-rose-700 font-bold py-2 px-4 border border-gray-500 rounded-full uppercase"
+                >
+                  See Recepie
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   </div>
+
+    <!-- <login form> -->
+   <div id="SignUp">
+
+    <div class="bg-white p-10 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-3xl font-semibold mb-6 text-center text-gray-800">Create an Account</h2>
+        <form action="#" method="POST">
+            <div class="mb-5">
+                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-5">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-5">
+                <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-5">
+                <label for="confirm_password" class="block text-gray-700 font-medium mb-2">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="flex items-center mb-5">
+                <input type="checkbox" id="terms" name="terms" class="mr-2">
+                <label for="terms" class="text-gray-700">I agree to the <a href="#" class="text-blue-500 hover:underline">terms and conditions</a></label>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">Register</button>
+        </form>
+        <p class="mt-6 text-center text-gray-600">Already have an account? <a href="" class="text-blue-500 hover:underline">Login here</a></p> 
+    </div> 
+<!-- <login> -->
+    <div id="login">
+
+        <div class="bg-white p-8 rounded-lg  w-96">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Welcome Back</h1>
+            <p class="text-gray-500">Sign in to continue </p>
+        </div>
+
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+
+            <button type="submit"
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Sign in
+            </button>
+        </form>
+
+        <div class="mt-8">
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    </div>
+
+
+
+   </div>
+
+    <!-- <footer> -->
+
+   
+
+      <footer class="flex flex-col space-y-10 justify-center m-10">
+      <nav
+        class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium"
+      >
+        <a class="hover:text-gray-900" href="index.html">Home</a>
+        <a class="hover:text-gray-900" href="categories.html">Categories</a>
+
+        <a class="hover:text-gray-900" href="tipsandtricks.html"
+          >Tips & Tricks</a
+        >
+        <a class="hover:text-gray-900" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex justify-center space-x-5">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/fluent/30/000000/instagram-new.png"
+          />
+        </a>
+        <a
+          href="https://messenger.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.icons8.com/fluent/30/000000/facebook-messenger--v2.png"
+          />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
+        </a>
+      </div>
+      <p class="text-center text-gray-700 font-medium py-5">
+        &copy; 2022 Company Ltd. All rights reservered.
+      </p>
+    </footer>
+
+  
+
+
+<!-- <for moblie> -->
+    
+  <!-- <div  id="moblie" class="hidden lg:flex gap-20 justify-between items-center"> 
+        <ul class="flex gap-8">
+          <a href="index.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Home
+            </li></a
+          >
+          <a href="#categories">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Categories
+            </li></a
+          >
+          <a href="tipsandtricks.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Tips & Tricks
+            </li></a
+          >
+          <a href="contact.html">
+            <li
+              class="text-md font-semibold text-white hover:text-red-600 cursor-pointer"
+            >
+              Contact Us
+            </li></a
+          >
+        </ul>
+       
+      </div>  -->
+   
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
